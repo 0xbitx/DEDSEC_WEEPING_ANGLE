@@ -12,6 +12,14 @@ Weeping Angel is a post-exploitation and adversary emulation framework designed 
 The tool injects a polymorphic dropper into regular Python code, ensuring each instance is unique by modifying variables, functions, and signatures to evade detection. This adaptive approach means every build incorporates fresh code changes, making it difficult for security tools to identify patterns. Inspired by APT41 techniques and evasion strategies, Weeping Angel
  provides a robust framework for exploring advanced C2 methodologies in controlled, ethical environments.
 
+<h2 align="center">TOOL BANNER</h2>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/e2f3e0f8-e51c-4488-b03b-c98dd7349a0c", width="1000", height="1000">
+<img src="https://github.com/user-attachments/assets/3a0ac814-50be-4ded-88be-072744b1c8a2", width="1000", height="1000">
+<img src="https://github.com/user-attachments/assets/0fb2e86c-7f75-4f23-ba77-86ee4cd8415b", width="1000", height="1000">
+</p>
+
 ### Key Features:
 * **Polymorphic Injection**: Automatically modifies code (e.g., variables and functions) in each build to create unique signatures, making it harder for antivirus tools to detect.
 
@@ -49,7 +57,8 @@ The tool injects a polymorphic dropper into regular Python code, ensuring each i
      - **Automatic file organization** by victim machine ID
      - **Timestamped filenames** for forensic tracking
      - **Covert channel** blending with legitimate Google Drive traffic
-        
+
+
 ### SETUP
 Setup (Google Calendar C2)
 
