@@ -64,62 +64,110 @@ Setup (Google Calendar C2)
 
 Follow the steps below to configure your Google Cloud project and enable Google Calendar API for C2 communication.
 
-1. Create a Google Cloud Project and Service Account
+Part 1 — Google Cloud Project & Service Account (for Calendar C2)
 
-    Go to: https://console.cloud.google.com
+    Create a new Google Cloud Project
 
-    From the sidebar, go to IAM & Admin → Service Accounts
+   * Go to: https://console.cloud.google.com
+ 
+ 		* From the top bar, click the project dropdown → New Project
+ 
+ 		* Project name: rat-calendar-c2
+ 
+ 		* Click Create
 
-    Click + Create Project
-     * Project name: (e.g.,) rat-calendar-c2
-     * Click Create
+    Create a Service Account (used by your C2 + implant)
 
-    Click + Create Service Account
-     * Service account name: e.g. test-c2
-     * Description: (optional)
-     * Click Create and Continue
+   * Sidebar: IAM & Admin → Service Accounts
 
-    Grant this service account access:
-      * Role: Owner
-      * Click Continue → Done
+   * Click + Create Service Account
 
-    Click your newly created service account
-      * Go to the Keys tab
-      * Click Add Key → Create New Key
-      * Select JSON, then click Create
-      * Save the file as: c2_creds.json in your directory
+   * Name: test-c2
 
-3. Share Google Calendar with Service Account
+   * Click Create and Continue
 
-    Visit: https://calendar.google.com
+   * Role: Owner (or at minimum: Calendar Editor + Drive Editor)
 
-    On the left, click the 3-dot menu beside your calendar → Settings and sharing
+   * Click Continue → Done
 
-    Scroll to Share with specific people
-     * Click + Add people and groups
-     * Paste your Service Account email
-     * Example: test-c2@your-project-id.iam.gserviceaccount.com
-     * Set permission to: Make changes and manage sharing
-     * Click Send
+    Generate Service Account Key
 
-5. Enable Google Calendar API
+   * Click your new service account
 
-     * Go to: https://console.cloud.google.com/apis/library
-     * Search for: Google Calendar API
-     * Click it → Click Enable
-     
-6. Enable Google Drive API
+   * Go to Keys tab → Add Key → Create New Key
 
-  	* Go to: https://console.cloud.google.com/apis/library
-    * Search for: Google Drive API
-    * Click it → Click Enable
-    * Go to "Credentials" and Click ( + Create credentials) and select (OAuth client ID).
-  		- select: Desktop app
-  		- name: data exfiltration config
-  
-    * Download the credentials.json file and place it in Dedsec directory as data_exfil.json
-     * APIs & Services → OAuth consent screen → Audience → Add users
-     * type your email address and save
+   * Select JSON → Create
+
+   * Save file as: c2_creds.json in your C2 directory
+
+    Enable Google Calendar API
+
+   * Go to: https://console.cloud.google.com/apis/library
+
+   * Search: Google Calendar API
+
+   * Select it → Click Enable
+
+Part 2 — Share Calendar with Service Account
+
+   * Visit: https://calendar.google.com
+
+   * On the left, find your calendar → click 3-dot menu → Settings and sharing
+
+   * Scroll to "Share with specific people"
+
+   * Click + Add people
+
+   * Paste your Service Account email
+
+   * Looks like: test-c2@your-project-id.iam.gserviceaccount.com
+
+ 		* Set permission to: Make changes and manage sharing
+ 
+ 		* Click Send
+
+Part 3 — Google Drive API (for data exfiltration)
+
+   * Enable Google Drive API
+
+   * Go to: https://console.cloud.google.com/apis/library
+
+   * Search: Google Drive API → Enable
+
+    Configure OAuth Consent Screen (required for Drive user auth)
+
+   * Sidebar: APIs & Services → OAuth consent screen
+
+   * User Type: External → Create
+
+   * App name: c2-server
+
+   * User support email: your Gmail
+
+   * Developer contact: your Gmail
+
+   * Click Save and Continue (skip scopes for now)
+
+   * Audience → Add users → enter your Gmail address → Save
+
+   * Click Back to Dashboard
+
+    Create OAuth Client ID (for Drive exfil)
+
+   * Sidebar: APIs & Services → Credentials
+
+   * Click + Create Credentials → OAuth Client ID
+
+   * Application type: Desktop app
+
+   * Name: data exfiltration config
+
+   * Click Create
+
+   * Download the JSON file → rename to data_exfil.json
+
+   * Place it in your Dedsec directory
+
 
 ### Tool Structure:
 After completing all steps, your directory should contain:
