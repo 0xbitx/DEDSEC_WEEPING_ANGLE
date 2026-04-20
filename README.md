@@ -59,7 +59,6 @@ The tool injects a polymorphic dropper into regular Python code, ensuring each i
      - **Covert channel** blending with legitimate Google Drive traffic
 
 
-
 ## Setup (Google Calendar C2)
 
 ### Follow the steps below to configure your Google Cloud project and enable Google Calendar API for C2 communication.
@@ -187,7 +186,6 @@ The tool injects a polymorphic dropper into regular Python code, ensuring each i
 <img width="1427" height="1059" alt="Screenshot_20260419_002226" src="https://github.com/user-attachments/assets/f820285d-65cd-48a4-980f-b4c9d1aec1ef" />
 
    * Audience → Add users → enter your Gmail address → Save
-   * Click Back to Dashboard
 
 ### Create OAuth Client ID (for Drive exfil)
 
@@ -206,7 +204,6 @@ The tool injects a polymorphic dropper into regular Python code, ensuring each i
      
    * Download the JSON file → rename to data_exfil.json
    * Place it in your Dedsec directory
-
 
 
 ### Tool Structure:
