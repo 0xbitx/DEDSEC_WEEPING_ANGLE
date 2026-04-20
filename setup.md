@@ -95,8 +95,8 @@
 
    * Go to: https://console.cloud.google.com/apis/library
      
-<img width="1423" height="592" alt="Screenshot_20260419_000729" src="https://github.com/user-attachments/assets/e763c989-23d7-43e4-8e0e-717c68133580" />
-<img width="1423" height="592" alt="Screenshot_20260419_000756" src="https://github.com/user-attachments/assets/ddb4c18d-a599-4720-94ce-f53856101f8f" />
+<img width="1419" height="871" alt="Screenshot_20260418_235931" src="https://github.com/user-attachments/assets/f86058bf-1807-4de8-a78b-53db49224bb0" />
+<img width="1421" height="657" alt="Screenshot_20260419_000001" src="https://github.com/user-attachments/assets/9b2fb074-9d70-43ae-acb9-0288e2f7ffad" />
 
    * Search: Google Drive API → Enable
 
