@@ -126,7 +126,6 @@
 <img width="1427" height="1059" alt="Screenshot_20260419_002226" src="https://github.com/user-attachments/assets/f820285d-65cd-48a4-980f-b4c9d1aec1ef" />
 
    * Audience → Add users → enter your Gmail address → Save
-   * Click Back to Dashboard
 
 ### Create OAuth Client ID (for Drive exfil)
 
