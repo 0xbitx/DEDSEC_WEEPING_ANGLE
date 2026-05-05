@@ -43,6 +43,8 @@ The tool injects a polymorphic dropper into regular Python code, ensuring each i
 
 * **Extensible Payload Framework**: Load custom Python exploit modules from a community-driven repository or local library. Users can create, import, and execute third-party payloads (e.g., privilege escalation, data exfiltration, persistence mechanisms) on target machines without modifying the core backdoor code. Supports hot-swappable modules via the C2 channel.
 
+* **PDF Vector Exploitation**: Generates a malicious PDF file that auto-executes the backdoor payload upon opening. When the victim clicks or opens the file, the embedded trigger mechanism activates and deploys the payload without requiring additional user interaction or explicit execution permissions.
+
 * **Comprehensive Data Exfiltration Suite**:
      - dump_browser: Extracts browser data including saved passwords, cookies, and browsing history.
      - dump_token: Extracts Discord, Chrome, and other application authentication tokens.
