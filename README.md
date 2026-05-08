@@ -3,14 +3,19 @@
 <img src="https://github.com/user-attachments/assets/9506f946-7b21-45fb-8f66-65b4897db5d0", width="400", height="400">
 </p>
 
-<h1 align="center">Weeping Angel</h1>
-<h4 align="center">Weeping Angel - Post-exploitation Framework for linux system</h4>
+<h1 align="center">Weeping Angel</h1> <h4 align="center">Weeping Angel - Initial Access & Post-Exploitation Framework for Linux Systems</h4>
 
-### DESCRIPTION
-Weeping Angel is a post-exploitation and adversary emulation framework designed to aid Red Teams and penetration testers. As a Linux-based tool built for ethical penetration testing and cybersecurity research, Weeping Angel leverages Google Calendar as a stealthy Command and Control (C2) server to manage connections with targets through event-based communication.
+## DESCRIPTION
 
-The tool injects a polymorphic dropper into regular Python code, ensuring each instance is unique by modifying variables, functions, and signatures to evade detection. This adaptive approach means every build incorporates fresh code changes, making it difficult for security tools to identify patterns. Inspired by APT41 techniques and evasion strategies, Weeping Angel
- provides a robust framework for exploring advanced C2 methodologies in controlled, ethical environments.
+Weeping Angel is an Initial Access and Post-Exploitation framework designed for adversary emulation and ethical penetration testing. As a Linux-based tool built for cybersecurity research and authorized red team operations, Weeping Angel leverages Google Calendar as a stealthy Command and Control (C2) server to manage connections with targets through event-based communication.
+
+The framework provides two core capabilities:
+
+Initial Access: Weeping Angel generates sophisticated, polymorphic droppers that can bypass common security controls, delivering the payload to target systems through various vectors including phishing campaigns, supply chain attacks, or direct deployment during authorized assessments. The framework can also generate PDF format payloads, embedding malicious code within seemingly legitimate PDF documents to evade detection and execute initial access vectors through document-based social engineering attacks.
+
+Post-Exploitation: Once access is established, the framework enables comprehensive system reconnaissance, privilege escalation, lateral movement, persistence mechanisms, and data exfiltration — all while maintaining stealth through Google Calendar-based C2 communication.
+
+The tool injects a polymorphic dropper into regular Python code, ensuring each instance is unique by modifying variables, functions, and signatures to evade detection. This adaptive approach means every build incorporates fresh code changes, making it difficult for security tools to identify static patterns. Inspired by APT41 tradecraft, advanced evasion strategies, and modern initial access brokers (IAB) techniques, Weeping Angel provides a robust framework for exploring complete attack lifecycles in controlled, ethical environments.
 
 <h2 align="center">TOOL BANNER</h2>
 
